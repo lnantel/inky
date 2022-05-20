@@ -616,23 +616,37 @@ oop.inherits(inkFoldingRules, BaseFoldMode);
 
 // Provide Ink Keywords for Auto-Completer
 const keywords = [
-    "CONST",
-    "CHOICE_COUNT",
+    //Ink keywords related to unused functionalities in TwoFalls were commented out.
+
+    // "CONST",
+    // "CHOICE_COUNT",
     "DONE",
     "END",
     "INCLUDE",
-    "LIST",
-    "LIST_ALL",
-    "LIST_COUNT",
-    "LIST_INVERT",
-    "LIST_MAX",
-    "LIST_MIN",
-    "LIST_RANGE",
-    "LIST_VALUE",
-    "LIST_RANDOM",
+    // "LIST",
+    // "LIST_ALL",
+    // "LIST_COUNT",
+    // "LIST_INVERT",
+    // "LIST_MAX",
+    // "LIST_MIN",
+    // "LIST_RANGE",
+    // "LIST_VALUE",
+    // "LIST_RANDOM",
     "TODO",
-    "TURNS_SINCE",
-    "VAR",
+    // "TURNS_SINCE",
+    // "VAR",
+
+    // TwoFalls specific keywords:
+    "SPEAKER: ",
+    "LINEID: ",
+    "NormalMaikan",
+    "NarratorMaikan",
+    "Jeanne",
+    "NarratorJeanne",
+    "Tehonwastasta",
+    "Trader1",
+    "Trader2",
+    "Trader3"
 ];
 
 var InkMode = function() {
