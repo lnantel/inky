@@ -120,7 +120,47 @@ var inkHighlightRules = function() {
                 "punctuation.definition.comment.json",
                 "comment.line.double-slash.js"
             ],
-            regex: /(\/\/)(.*$)/        // // comment
+            regex: /(\/\/)/,         // // comment
+            push:[{ 
+                    regex: /$|^/,
+                    next: "pop"
+                },{
+                    regex: /<(?:AUDIO|MUSIC)>/,
+                    token: "comment.line.tag.audio"
+                },{
+                    regex: /<(?:ANIMATION|GESTURE)>/,
+                    token: "comment.line.tag.anim"
+                },{
+                    regex: /<(?:GIVE\sCONTROL|TAKE\sCONTROL|CONTROL|CAMERA|PROMPT)>/,
+                    token: "comment.line.tag.scripting"
+                },{
+                    regex: /<.*?>/,
+                    token: "comment.line.tag"
+                },{
+                    regex: /\[/,
+                    token: "comment.line.logic",
+                    push: [{
+                        regex: /\]|$/,
+                        token: "comment.line.logic",
+                        next: "pop"
+                    },{
+                        regex: /\bF_.*?\b/,
+                        token: "comment.line.fact"
+                    },{
+                        regex: /\bG_.*?\b/,
+                        token: "comment.line.grouping"
+                    },{
+                        defaultToken: "comment.line.logic"
+                    }]
+                },{
+                    regex: /\bF_.*?\b/,
+                    token: "comment.line.fact"
+                },{
+                    regex: /\bG_.*?\b/,
+                    token: "comment.line.grouping"
+                },{
+                    defaultToken: "comment.line.double-slash.js"
+                }]
         }],
 
         // Try different types of divert in sequence, since it's a bit complicated
@@ -454,6 +494,15 @@ var inkHighlightRules = function() {
             }]
         }],
         "#tags": [{
+            // Correctly formatted '#LINEID: NNNNN' tags will be highlighted.
+            token:"tag.lineid",
+            regex: /#LINEID:\s[0-9]{5}/,
+            },
+            {
+            // Correctly formatted '#SPEAKER: ValidSpeakerName' tags will be highlighted.
+            token:"tag.speaker",
+            regex: /#SPEAKER:\s(?:Jeanne|NarratorJeanne|NormalMaikan|NarratorMaikan|Pierre|Tehonwastasta|Trader1|Trader2|Trader3)/,
+            }, {
             // e.g. #tag should be highlighted
             token: "tag",
             regex: /#/,
@@ -461,7 +510,8 @@ var inkHighlightRules = function() {
                 token:"tag",
                 regex: /$/,
                 next: "pop"
-            }, {
+            },
+            {
                 include: "#comments"
             }, {
                 defaultToken: "tag.innerContent"
@@ -622,6 +672,7 @@ const keywords = [
     "NormalMaikan",
     "NarratorMaikan",
     "Jeanne",
+    "Pierre",
     "NarratorJeanne",
     "Tehonwastasta",
     "Trader1",

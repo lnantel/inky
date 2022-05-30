@@ -1,0 +1,44 @@
+.window.twofalls span.ace_tag.ace_lineid {
+    color: #666666; 
+    font-style: italic;
+}
+
+.window.twofalls span.ace_tag.ace_speaker {
+    color: #94f3ff;
+    font-weight: bolder;
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_tag.ace_audio {
+    color: #bd9100; 
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_tag.ace_anim {
+    color: #7bbd00; 
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_tag.ace_scripting {
+    color: #d791ff; 
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_tag {
+    color: #bd6b00; 
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_logic {
+    color: #d791ff;
+    font-style: italic;
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_fact {
+    color: #ff6a6a;
+    font-weight: bolder;
+}
+
+.window.twofalls span.ace_comment.ace_line.ace_grouping {
+    color: #ff68b4;
+    font-weight: bolder;
+}
+
+/* .window.twofalls span.ace_comment.ace_line.ace_double-slash.ace_js {
+    color: #9b9b9b;
+} */
