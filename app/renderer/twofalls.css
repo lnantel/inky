@@ -9,11 +9,11 @@
 }
 
 .window.twofalls span.ace_comment.ace_line.ace_tag.ace_audio {
-    color: #bd9100; 
+    color: #d791ff; 
 }
 
 .window.twofalls span.ace_comment.ace_line.ace_tag.ace_anim {
-    color: #7bbd00; 
+    color: #d791ff; 
 }
 
 .window.twofalls span.ace_comment.ace_line.ace_tag.ace_scripting {
@@ -21,7 +21,7 @@
 }
 
 .window.twofalls span.ace_comment.ace_line.ace_tag {
-    color: #bd6b00; 
+    color: #d791ff; 
 }
 
 .window.twofalls span.ace_comment.ace_line.ace_logic {
