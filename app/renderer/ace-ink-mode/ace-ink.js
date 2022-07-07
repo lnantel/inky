@@ -501,7 +501,7 @@ var inkHighlightRules = function() {
             {
             // Correctly formatted '#SPEAKER: ValidSpeakerName' tags will be highlighted.
             token:"tag.speaker",
-            regex: /#SPEAKER:\s(?:Jeanne|NarratorJeanne|NormalMaikan|NarratorMaikan|Pierre|Tehonwastasta|Trader1|Trader2|Trader3)/,
+            regex: /#SPEAKER:\s(?:Jeanne|NarratorJeanne|NormalMaikan|NarratorMaikan|Pierre|Tehonwastasta|Trader1|Trader2|Trader3|Jesuit|Wendat1|Wendat2|Wendat3)/,
             }, {
             // e.g. #tag should be highlighted
             token: "tag",
@@ -678,6 +678,10 @@ const keywords = [
     "Trader1",
     "Trader2",
     "Trader3",
+    "Jesuit",
+    "Wendat1",
+    "Wendat2",
+    "Wendat3",
 
     //Ink keywords related to unused functionalities in TwoFalls were commented out.
 
